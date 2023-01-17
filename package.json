@@ -1,0 +1,23 @@
+{
+  "name": "dog-food-api",
+  "version": "1.0.0",
+  "description": "This API allows users to check if a certain food is safe for dogs to eat. The API utilizes a database of known safe and unsafe foods for dogs and returns a response indicating whether the requested food is safe or not.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "nodemon": "nodemon server.js"
+  },
+  "author": "Nicoleta Serban",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "mongodb": "^4.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
