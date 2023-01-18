@@ -34,15 +34,19 @@
       <p>The API returns a JSON object with the following properties:</p>
       <ul>
         <li>
-          <strong>food</strong> (string): The name of the food that was queried.
+          <strong>name</strong> (string): The name of the food that was queried.
         </li>
         <li>
-          <strong>status</strong> (string): Indicates whether the food is safe
-          for dogs to eat (<code>"safe"</code>) or not (<code>"toxic"</code>).
+          <strong>toxic</strong> (string): Indicates whether the food is toxic
+          for dogs to eat.
         </li>
         <li>
-          <strong>message</strong> (string): Additional information about the
-          food and why it is or is not safe for dogs to eat.
+          <strong>safe</strong> (string): Indicates whether the food is safe for
+          dogs to eat.
+        </li>
+        <li>
+          <strong>obs</strong> (string): Additional information about the food
+          and why it is or is not safe for dogs to eat.
         </li>
       </ul>
       <p class="fw-bold">Example</p>

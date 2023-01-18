@@ -27,6 +27,7 @@ A GET request to the endpoint https://dog-food-api.onrender.com/api/taro will re
 
 The API returns a JSON object with the following properties:
 
-- food (string): The name of the food that was queried.
-- status (string): Indicates whether the food is safe for dogs to eat ("safe") or not ("toxic").
-- message (string): Additional information about the food and why it is or is not safe for dogs to eat.
+- name (string): The name of the food that was queried.
+- toxic (string): Indicates whether the food is toxic for dogs to eat.
+- dafe (string): Indicates whether the food is safe for dogs to eat.
+- obs (string): Additional information about the food and why it is or is not safe for dogs to eat.
