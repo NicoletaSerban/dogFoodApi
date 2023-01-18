@@ -9,13 +9,21 @@ This API allows users to check whether a specific human food is safe or toxic fo
 - Veterinarians and animal welfare organizations that want to provide information about safe and toxic foods for dogs;
 - App and website developers who want to integrate a food safety feature for dogs into their platform.
 
-# Example
+# Endpoints
+
+'GET /api/{foodName}'
+
+This endpoint returns information about a specific food and whether it is safe or toxic for dogs to consume.
+
+'GET /api/banana'
+
+# Example Request
 
 A GET request to the endpoint https://dog-food-api.onrender.com/api/taro will return the following response:
 
 ![App Screenshot](https://i.imgur.com/kBgNo1P.png)
 
-# Response
+# Example Response
 
 The API returns a JSON object with the following properties:
 
