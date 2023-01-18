@@ -1,52 +1,76 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
     <title>API Documentation: Dog Food Compatibility</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container col-5">
       <h1>API Documentation: Dog Food Compatibility</h1>
-      <hr>
-      <p>Introduction</p>
-      <p>This API allows users to check if a certain food is safe for dogs to eat. The API utilizes a database of known safe and unsafe foods for dogs and returns a response indicating whether the requested food is safe or not.</p>
-      <p>Endpoint</p>
-      <p>The API has a single endpoint that accepts GET requests in the following format:</p>
-      <pre>https://dog-food-api.onrender.com/{food_name}</pre>
-      <p>Where <code>{food_name}</code> is the name of the food the user wants to check.</p>
-      <p>Response</p>
+      <hr />
+      <p class="fw-bold">Introduction</p>
+      <p>
+        This API allows users to check if a certain food is safe for dogs to
+        eat. The API utilizes a database of known safe and toxic foods for dogs
+        and returns a response indicating whether the requested food is safe or
+        not.
+      </p>
+      <p class="fw-bold">Endpoint</p>
+      <p>
+        The API has a single endpoint that accepts GET requests in the following
+        format:
+      </p>
+      <pre>https://dog-food-api.onrender.com/api/{foodName}</pre>
+      <p>
+        Where <code>{foodName}</code> is the name of the food the user wants to
+        check.
+      </p>
+      <p class="fw-bold">Response</p>
       <p>The API returns a JSON object with the following properties:</p>
       <ul>
-        <li><strong>food</strong> (string): The name of the food that was queried.</li>
-        <li><strong>status</strong> (string): Indicates whether the food is safe for dogs to eat (<code>"safe"</code>) or not (<code>"unsafe"</code>).</li>
-        <li><strong>message</strong> (string): Additional information about the food and why it is or is not safe for dogs to eat.</li>
+        <li>
+          <strong>food</strong> (string): The name of the food that was queried.
+        </li>
+        <li>
+          <strong>status</strong> (string): Indicates whether the food is safe
+          for dogs to eat (<code>"safe"</code>) or not (<code>"toxic"</code>).
+        </li>
+        <li>
+          <strong>message</strong> (string): Additional information about the
+          food and why it is or is not safe for dogs to eat.
+        </li>
       </ul>
-      <p>Example</p>
+      <p class="fw-bold">Example</p>
+      <p>
+        A GET request to the endpoint
+        <code>https://dog-food-api.onrender.com/api/taro</code> will return the
+        following response:
+      </p>
       <img src="https://i.imgur.com/kBgNo1P.png" alt="JSON OBJ" />
-      <p>A GET request to the endpoint <code>https://api.dogfoodcompatibility.com/food/chicken</code> will return the following response:</p>
-      <pre>
-{
-    "food": "chicken",
-    "status": "safe",
-    "message": "Chicken is a lean protein source that is safe for dogs to eat in small amounts. It should be cooked and served plain, without any seasonings or sauces."
-}
-      </pre>
-      <p>Error Handling</p>
-      <p>If the API is unable to find a match for the requested food in its database, it will return a response with the following properties:</p>
+
+      <p class="fw-bold mt-4">Error Handling</p>
+      <p>
+        If the API is unable to find a match for the requested food in its
+        database, it will return a response with the following properties:
+      </p>
       <ul>
         <li><strong>status</strong>: <code>"error"</code></li>
-        <li><strong>message</strong>: <code>"Food not found in database"</code></li>
+        <li>
+          <strong>message</strong>: <code>"Food not found in database"</code>
+        </li>
       </ul>
-      <p>If an invalid endpoint is requested, the API will return a response with the following properties:</p>
-      <ul>
-        <li><strong>status</strong>: <code>"error"</code></li>
-        <li><message</strong>: <code>"Invalid endpoint"</code></li>
-    </ul>
-    <p><strong>Note</strong></p>
-    <p>This API is for reference only and should not be used as a substitute for professional veterinary advice. Always consult a veterinarian before introducing new foods to your dog's diet.</p>
-  </div>
-</body>
+
+      <p><strong>Note</strong></p>
+      <p>
+        This API is for reference only and should not be used as a substitute
+        for professional veterinary advice. Always consult a veterinarian before
+        introducing new foods to your dog's diet.
+      </p>
+    </div>
+  </body>
 </html>
-
-    
-

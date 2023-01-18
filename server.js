@@ -38,7 +38,9 @@ app.get("/api", (req, res) => {
 });
 
 app.get("/api/:foodName", (req, res) => {
-  const foodName = req.params.foodName.toLowerCase();
+  const food = req.params.foodName;
+  const foodName = food.charAt(0).toUpperCase() + food.slice(1).toLowerCase();
+  console.log(foodName);
   db.collection("food")
     .find({ name: foodName })
     .toArray()
@@ -46,7 +48,7 @@ app.get("/api/:foodName", (req, res) => {
       if (result[0]) {
         res.json(result[0]);
       } else {
-        res.json("Food not found.");
+        res.json("Food not found in database.");
       }
     })
     .catch((error) => console.error(error));
